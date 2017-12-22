@@ -1,0 +1,89 @@
+body
+	background: #fff
+	+css-lock(16, 50, 600, 1000)
+	line-height: 1.4
+
+svg
+  overflow: hidden
+
+.container
+  max-width: 1100px
+  margin: 0 auto
+
+header
+  background: url('../img/kartinka-zastavka.jpg') no-repeat 50% 50%
+  background-size: cover
+  width: 100%
+  height: 100vh
+
+  .logo
+    margin-top: 11px;
+
+  .header__wraper
+    display: flex
+    justify-content: space-between;
+
+  .header__nav
+    font-size: 20px
+    margin-top: 40px
+    a
+      text-decoration: none
+      color: #b8bbc4
+      display: inline-block
+      position: relative
+      overflow: hidden
+      margin-left: 26px
+      padding-bottom: 4px
+      transition: all .2s linear
+
+      &:hover,&.is-active
+        color: #fff
+        &:before
+          transform: translate(0,0)
+      &:before
+        position: absolute
+        left: 0
+        width: 100%
+        bottom: 0
+        height: 2px
+        background: #2abbdc
+        content: ""
+        top: 87%
+        transform: translate(-100%,0)
+        transition: transform .2s linear
+
+
+.hero__title
+  margin-top: 200px;
+  font-size: 53px;
+  color: #2abbdc;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+.letter
+  display: inline-block
+  min-width: .3em
+
+.loader
+  background: #000
+  position: fixed
+  width: 100%
+  height: 100vh
+  z-index: 100
+  mix-blend-mode: multiply
+  &__inside
+    background: white
+    width: 150vw
+    height: 150vh
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%) scale(0.01)
+    position: absolute
+    border-radius: 50%
+
+p
+  font-size: 60px
+  margin: 40px 0
+  color: #2abbdc
+  font-weight: 700
+
